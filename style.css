@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --purple: #7C3AED;
+    --neon-pink: #D946EF;
+    --midnight: #0B1020;
+    --white: #F8FAFC;
+    --slate: #1E293B;
+    --sky-blue: #38BDF8;    
+}
+
+
+
+
+
+body {
+    background-color: var(--midnight);
+    background-image:
+        linear-gradient(
+            rgba(11, 16, 32, 0.55),
+            rgba(11, 16, 32, 0.75)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--white);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--slate);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--neon-pink);
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav-links a:hover {
+    color: var(--sky-blue);
+}
+
+.nav-btn {
+    padding: 1rem;
+    background: var(--purple);
+    color: var(--white);
+    border-radius: 0.7rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--neon-pink);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(217, 70, 239, 0.3);
+}
+.nav-btn:active {
+    transform: translateY(-1px);
+}
+
+
+
+
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 8%;
+    gap: 3rem;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-tag {
+    color: var(--neon-pink);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    max-width: 550px;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: var(--neon-pink);
+}
+
+.hero-description {
+    color: #94A3B8;
+    line-height: 1.7;
+    max-width: 450px;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    padding: 1rem 2rem;
+    background: var(--purple);
+    color: var(--white);
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: var(--neon-pink);
+    transform: translateY(-4px);
+}
+
+.hero-preview {
+    flex: 1;
+    min-height: 350px;
+    background: var(--slate);
+    border: 1px solid #334155;
+    border-radius: 1rem;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+.dashboard {
+    padding: 1.5rem;
+    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 1.2rem;
+}
+
+.dashboard-header {
+    background: rgba(11, 16, 32, 0.65);
+    padding: 1.2rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.dashboard-header h3 span {
+    color: var(--neon-pink);
+}
+
+.dashboard-header p {
+    color: #94A3B8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+
+.task-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    flex: 1;
+    background: rgba(11, 16, 32, 0.65);
+    padding: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.stat-card h2 {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+}
+
+.stat-card p {
+    color: #94A3B8;
+    font-size: 0.85rem;
+}
+
+
+
+
+.progress-section {
+    background: rgba(11, 16, 32, 0.65);
+    padding: 1.2rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    margin-bottom: 1.5rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.progress-info p {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.progress-info span {
+    color: var(--neon-pink);
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--slate);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.7rem;
+}
+
+.progress {
+    width: 67%;
+    height: 100%;
+    background: var(--purple);
+    border-radius: 10px;
+}
+
+.progress-section small {
+    color: #94A3B8;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: var(--slate);
+        padding: 2rem;
+    }
+
+    .nav-right.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
+
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        padding: 3rem 6%;
+        gap: 1.5rem;
+    }
+
+    .hero-content {
+        display: contents;
+    }
+
+    .hero-tag {
+        order: 1;
+        white-space: nowrap;
+        font-size: 0.75rem;
+        margin-bottom: 0;
+    }
+
+    .hero-content h1 {
+        order: 2;
+        font-size: 2.3rem;
+        line-height: 1.3;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .hero-description {
+        order: 3;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .hero-preview {
+        order: 4;
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .hero-btn {
+        order: 5;
+        align-self: center;
+    }
+
+}
